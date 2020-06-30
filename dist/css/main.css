@@ -1,0 +1,167 @@
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: inherit;
+          box-sizing: inherit;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+p {
+  font-size: 14px;
+  font-size: 0.875rem;
+}
+
+h1 {
+  font-size: 16px;
+  font-size: 1rem;
+}
+
+.wrapper {
+  background: #d3d3d3;
+  height: 100vh;
+  width: 100vw;
+}
+
+.fullSlide {
+  background: green;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  height: 80vh;
+  width: 100vw;
+}
+
+.fullSlide .left {
+  background: pink;
+  background-repeat: no-repeat;
+}
+
+.fullSlide .right {
+  background: lightcoral;
+  background-repeat: no-repeat;
+}
+
+.activethumb {
+  position: relative;
+}
+
+.activethumb img {
+  height: 100%;
+  width: 100%;
+}
+
+.thumbgrid {
+  background: grey;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  height: 20vh;
+  width: 100vw;
+}
+
+.thumbgrid::after {
+  content: '';
+  position: absolute;
+  bottom: 19%;
+  left: calc(10% - 10px);
+  background: grey;
+  width: 80px;
+  height: 40px;
+  -webkit-clip-path: polygon(50% 0, 0 100%, 100% 100%);
+          clip-path: polygon(50% 0, 0 100%, 100% 100%);
+}
+
+.thumbnail {
+  background: lightskyblue;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  height: 80%;
+  width: 20%;
+  color: white;
+}
+
+.thumbweather {
+  background: #f3d4d4;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  height: 100%;
+  width: 100%;
+  color: white;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.thumbweather h1 {
+  font-size: 50px;
+}
+
+.imageThumbSmall {
+  width: 100%;
+  height: 100%;
+}
+
+.thumbLeft {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+  height: 100%;
+  width: 100%;
+  overflow: hidden;
+  padding: 5px;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.thumbRight {
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+  height: 100%;
+  width: 100%;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+/*# sourceMappingURL=main.css.map */

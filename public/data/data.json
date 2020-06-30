@@ -1,0 +1,38 @@
+{
+  "details": [
+    {
+      "id": 1,
+      "title": "BBQ bonus",
+      "type": "IMAGE_TEXT",
+      "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor.",
+      "file": "./images/bbq.jpg",
+      "background": "dark",
+      "duration": 15
+    },
+    {
+      "id": 2,
+      "title": "Healthy vegetables",
+      "type": "IMAGE_TEXT",
+      "description": "Ut enim ad minim veniam, quis nostrud exercitation .",
+      "file": "./images/vegetables.jpg",
+      "background": "light",
+      "duration": 15
+    },
+    {
+      "id": 3,
+      "title": "Fresh sushi",
+      "type": "IMAGE_TEXT",
+      "description": "Duis aute irure dolor in reprehenderit in voluptate nulla pariatur.",
+      "file": "./images/sushi.jpg",
+      "background": "dark",
+      "duration": 25
+    },
+    {
+      "id": 4,
+      "type": "WEATHER",
+      "temperature": "25",
+      "file": "./images/sunny-background.jpg",
+      "duration": 10
+    }
+  ]
+}
