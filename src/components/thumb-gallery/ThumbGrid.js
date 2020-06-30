@@ -8,7 +8,7 @@ const ThumbGrid = ({ details, onClick }) => (
     details.length > 0 &&
     details.map((detail, index) => (
       <ThumbnailItem 
-        key={detail.file}
+        key={detail.id}
         detail={detail}
         index={index}
         onClick={onClick}
