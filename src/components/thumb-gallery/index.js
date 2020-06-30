@@ -28,7 +28,6 @@ const Thumb = () => {
   const handleClick = e => {
       const activeIndex = e.target.getAttribute('data-index')
       setActiveIndex(activeIndex)
-      console.log("hello")
   }
 
   return (

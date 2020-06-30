@@ -4,9 +4,9 @@ import darkWood from "../../bkgimages/dark-wood.jpg";
 import lightWood from "../../bkgimages/light-wood.png";
 import skybg from "../../bkgimages/sunny-background.jpg";
 
-const ThumbnailItem = ({ detail, onClick }) => {
-  const {
-    index, 
+const ThumbnailItem = ({ detail, onClick , index}) => {
+  console.log(index)
+  const { 
     file, 
     title, 
     type, 
@@ -15,7 +15,10 @@ const ThumbnailItem = ({ detail, onClick }) => {
     temperature 
   } = detail
   return (
-    <div className="thumbnail" key={index} data-index={index} onClick={onClick}>
+    <div 
+      className="thumbnail" 
+      key={index}
+    >
       {type === "IMAGE_TEXT" ? (
         <>
           <div
@@ -36,6 +39,8 @@ const ThumbnailItem = ({ detail, onClick }) => {
               className="imageThumbSmall"
               src={file}
               alt={file}
+              data-index={index} 
+              onClick={onClick}
             />
           </div>
         </>
