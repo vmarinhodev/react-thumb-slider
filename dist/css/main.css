@@ -60,7 +60,6 @@ h1 {
   height: 100%;
   width: 100%;
   background-size: auto;
-  border: 2px solid red;
 }
 
 .thumbgrid {
@@ -162,5 +161,14 @@ h1 {
       -ms-flex: 1;
           flex: 1;
   height: 100%;
+  width: 100%;
+  overflow: hidden;
+  padding: 0;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 /*# sourceMappingURL=main.css.map */
