@@ -3,6 +3,10 @@ import ThumbGrid from './ThumbGrid'
 import ActiveThumbWindow from './ActiveThumbWindow'
 import { useFetchDetails } from "../../hooks/useFetchDetails";
 
+import darkWood from "../../bkgimages/dark-wood.jpg";
+import lightWood from "../../bkgimages/light-wood.png";
+import skybg from "../../bkgimages/sunny-background.jpg";
+
 const Thumb = () => {
   const { details, loading, error } = useFetchDetails();
   const [activeIndex, setActiveIndex] = useState(0)
@@ -19,16 +23,30 @@ const Thumb = () => {
   
   const renderText = () => 
     details.length ? (
-      <div className="left">
-        <h1>{details[activeIndex].title}</h1>
-        <p>{details[activeIndex].description}</p>
+      <div className="left"
+      style={{
+        backgroundImage:
+        details[activeIndex].background === "light"
+            ? `url(${lightWood})`
+            : `url(${darkWood})`,
+      }}>
+        
+        <div className="left content">
+          <h1>{details[activeIndex].title}</h1>
+          <p>{details[activeIndex].description}</p>
+        </div>
+
       </div>
     ) : null
   
   const handleClick = e => {
       const activeIndex = e.currentTarget.getAttribute('data-index')
       setActiveIndex(activeIndex)
-      console.log("activeIndex - ", activeIndex)
+      console.log("activeIndex - ", typeof activeIndex)
+  }
+
+  function sortObject() {
+    activeIndex.sort()
   }
 
   return (

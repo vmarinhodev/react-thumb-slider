@@ -7,6 +7,7 @@ import skybg from "../../bkgimages/sunny-background.jpg";
 const ThumbnailItem = ({ detail, onClick , index}) => {
   
   const { 
+    id,
     file, 
     title, 
     type, 
@@ -14,6 +15,7 @@ const ThumbnailItem = ({ detail, onClick , index}) => {
     background, 
     temperature 
   } = detail
+
   return (
     <div 
       className="thumbnail"
@@ -50,7 +52,7 @@ const ThumbnailItem = ({ detail, onClick , index}) => {
           className="thumbweather"
           role="button"
           tabIndex={0}
-          key={index}
+          key={id}
           style={{ backgroundImage: `url(${skybg})` }}
           alt={title}
           data-index={index} 

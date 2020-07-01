@@ -5,14 +5,32 @@
 }
 
 .fullSlide {
-  background: green;
+  background-color: transparent;
   display: flex;
   height: 80vh;
   width: 100vw;
 
   .left {
-    background: pink;
+    color: white;
     background-repeat: no-repeat;
+    background-size: cover;
+    height: 100%;
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    align-content: center;
+    justify-content: center;
+
+    .content {
+      padding: 50px;
+    }
+
+    h1 {
+      font-size: 6rem;
+    }
+    p {
+      font-size: 4rem;
+    }
   }
 
   .right {

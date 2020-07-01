@@ -33,7 +33,7 @@ h1 {
 }
 
 .fullSlide {
-  background: green;
+  background-color: transparent;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -42,8 +42,33 @@ h1 {
 }
 
 .fullSlide .left {
-  background: pink;
+  color: white;
   background-repeat: no-repeat;
+  background-size: cover;
+  height: 100%;
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -ms-flex-line-pack: center;
+      align-content: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.fullSlide .left .content {
+  padding: 50px;
+}
+
+.fullSlide .left h1 {
+  font-size: 6rem;
+}
+
+.fullSlide .left p {
+  font-size: 4rem;
 }
 
 .fullSlide .right {
