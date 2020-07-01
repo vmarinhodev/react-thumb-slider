@@ -18,6 +18,7 @@
   .right {
     background: lightcoral;
     background-repeat: no-repeat;
+    background-size: cover;
   }
 }
 
@@ -27,6 +28,9 @@
   img{
     height: 100%;
     width:100%;
+    background-size: auto;
+    border: 2px solid red;
+
   }
 }
 .thumbgrid {
@@ -96,9 +100,5 @@
 .thumbRight{
   flex: 1 ;
   height: 100%;
-  width: 100%;
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-position: center;
 }
 

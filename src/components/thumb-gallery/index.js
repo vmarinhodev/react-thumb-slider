@@ -19,22 +19,23 @@ const Thumb = () => {
   
   const renderText = () => 
     details.length ? (
-      <>
-        <h1>title</h1>
-        
-      </>
+      <div className="left">
+        <h1>{details[activeIndex].title}</h1>
+        <p>{details[activeIndex].description}</p>
+      </div>
     ) : null
   
   const handleClick = e => {
-      const activeIndex = e.target.getAttribute('data-index')
+      const activeIndex = e.currentTarget.getAttribute('data-index')
       setActiveIndex(activeIndex)
+      console.log("activeIndex - ", activeIndex)
   }
 
   return (
     <div className="wrapper" key="index">
       <div className="fullSlide">
-        <div style={{ flex: 1}} className=" fullSlide left">
-        {renderText()}
+        <div style={{ flex: 1}} className=" fullSlide left" >
+          {renderText()}
         </div>
         <div style={{ flex: 1}} className="fullSlide right">
           {renderThumbnails()}

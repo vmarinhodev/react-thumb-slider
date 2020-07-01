@@ -5,7 +5,7 @@ import lightWood from "../../bkgimages/light-wood.png";
 import skybg from "../../bkgimages/sunny-background.jpg";
 
 const ThumbnailItem = ({ detail, onClick , index}) => {
-  console.log(index)
+  
   const { 
     file, 
     title, 
@@ -16,8 +16,10 @@ const ThumbnailItem = ({ detail, onClick , index}) => {
   } = detail
   return (
     <div 
-      className="thumbnail" 
-      key={index}
+      className="thumbnail"
+      tabIndex={0}
+      data-index={index} 
+      onClick={onClick}
     >
       {type === "IMAGE_TEXT" ? (
         <>
@@ -33,25 +35,30 @@ const ThumbnailItem = ({ detail, onClick , index}) => {
           >
             <h1>{title}</h1>
             <p>{description}</p>
+            
           </div>
           <div style={{ flex: 1 }} className="thumbRight">
             <img
               className="imageThumbSmall"
               src={file}
-              alt={file}
-              data-index={index} 
-              onClick={onClick}
+              alt={title}
             />
           </div>
         </>
       ) : (
         <div
           className="thumbweather"
+          role="button"
+          tabIndex={0}
           key={index}
           style={{ backgroundImage: `url(${skybg})` }}
           alt={title}
+          data-index={index} 
+          onClick={onClick}
         >
-          <h1>
+          
+          <h1
+          >
             {temperature}
             {"\u00b0"}C
           </h1>

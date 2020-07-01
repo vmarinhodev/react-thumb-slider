@@ -49,6 +49,7 @@ h1 {
 .fullSlide .right {
   background: lightcoral;
   background-repeat: no-repeat;
+  background-size: cover;
 }
 
 .activethumb {
@@ -58,6 +59,8 @@ h1 {
 .activethumb img {
   height: 100%;
   width: 100%;
+  background-size: auto;
+  border: 2px solid red;
 }
 
 .thumbgrid {
@@ -159,9 +162,5 @@ h1 {
       -ms-flex: 1;
           flex: 1;
   height: 100%;
-  width: 100%;
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-position: center;
 }
 /*# sourceMappingURL=main.css.map */
