@@ -15,8 +15,8 @@ const ThumbnailItem = ({ detail, onClick , index}) => {
     background, 
     temperature 
   } = detail
-
   return (
+    
     <div 
       className="thumbnail"
       tabIndex={0}
@@ -39,7 +39,7 @@ const ThumbnailItem = ({ detail, onClick , index}) => {
             <p>{description}</p>
             
           </div>
-          <div style={{ flex: 1 }} className="thumbRight">
+          <div className="thumbRight">
             <img
               className="imageThumbSmall"
               src={file}
@@ -55,12 +55,9 @@ const ThumbnailItem = ({ detail, onClick , index}) => {
           key={id}
           style={{ backgroundImage: `url(${skybg})` }}
           alt={title}
-          data-index={index} 
-          onClick={onClick}
         >
           
-          <h1
-          >
+          <h1>
             {temperature}
             {"\u00b0"}C
           </h1>

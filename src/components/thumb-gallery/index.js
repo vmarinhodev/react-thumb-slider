@@ -5,7 +5,6 @@ import { useFetchDetails } from "../../hooks/useFetchDetails";
 
 import darkWood from "../../bkgimages/dark-wood.jpg";
 import lightWood from "../../bkgimages/light-wood.png";
-import skybg from "../../bkgimages/sunny-background.jpg";
 
 const Thumb = () => {
   const { details, loading, error } = useFetchDetails();
@@ -20,7 +19,7 @@ const Thumb = () => {
         <ActiveThumbWindow  activeThumbnail={details[activeIndex]}/>
       </>
     ) : null
-  
+
   const renderText = () => 
     details.length ? (
       <div className="left"
@@ -39,25 +38,27 @@ const Thumb = () => {
       </div>
     ) : null
   
-  const handleClick = e => {
+  const handleClick = (e) => {
+    
       const activeIndex = e.currentTarget.getAttribute('data-index')
-      setActiveIndex(activeIndex)
-      console.log("activeIndex - ", typeof activeIndex)
-  }
+      
+      function swap(details, activeIndex, to){
+        let temp = details[activeIndex]
 
-  function sortObject() {
-    activeIndex.sort()
+        details[activeIndex] = details[to]
+        details[to] = temp
+      }
+      swap(details, 0, activeIndex)
+
+      setActiveIndex(activeIndex)
+      
   }
 
   return (
     <div className="wrapper" key="index">
       <div className="fullSlide">
-        <div style={{ flex: 1}} className=" fullSlide left" >
           {renderText()}
-        </div>
-        <div style={{ flex: 1}} className="fullSlide right">
           {renderThumbnails()}
-        </div>
       </div>
       <div className="thumbgrid">
         <ThumbGrid details={details} onClick={handleClick} />
