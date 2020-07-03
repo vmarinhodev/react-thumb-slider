@@ -2,7 +2,7 @@ import React from 'react'
 
 
 const ActiveThumbWindow = ({ activeThumbnail }) => {
-
+//console.log ('activeThumbnail', activeThumbnail)
   
   return (
     <div className="activethumb">

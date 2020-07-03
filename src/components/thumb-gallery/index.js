@@ -1,7 +1,8 @@
 import React, { useState } from 'react'
 import ThumbGrid from './ThumbGrid'
 import ActiveThumbWindow from './ActiveThumbWindow'
-import { useFetchDetails } from "../../hooks/useFetchDetails";
+import { useFetchDetails } from '../../hooks/useFetchDetails'
+import { useTransition } from '../../hooks/useTransition'
 
 import darkWood from "../../bkgimages/dark-wood.jpg";
 import lightWood from "../../bkgimages/light-wood.png";
@@ -16,7 +17,7 @@ const Thumb = () => {
   const renderThumbnails = () => 
     details.length ? (
       <>
-        <ActiveThumbWindow  activeThumbnail={details[activeIndex]}/>
+        <ActiveThumbWindow  activeThumbnail={details[activeIndex]} translate={450}/>
       </>
     ) : null
 
@@ -38,25 +39,22 @@ const Thumb = () => {
       </div>
     ) : null
   
-  const handleClick = (e) => {
+    const handleClick = (e) => {
     
       const activeIndex = e.currentTarget.getAttribute('data-index')
       
       function swap(details, activeIndex, to){
         let temp = details[activeIndex]
-
         details[activeIndex] = details[to]
         details[to] = temp
       }
       swap(details, 0, activeIndex)
-
       setActiveIndex(activeIndex)
-      
   }
 
   return (
     <div className="wrapper" key="index">
-      <div className="fullSlide">
+      <div className="fullSlide container">
           {renderText()}
           {renderThumbnails()}
       </div>
